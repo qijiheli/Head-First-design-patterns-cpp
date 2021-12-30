@@ -1,5 +1,5 @@
 //SimUDuck
-include <iostream>
+#include <iostream>
 
 
 class FlyBehavior
