@@ -64,7 +64,8 @@ class CurrentConditionsDisplay : public Observer, public DisplayElement
 {
 public:
     CurrentConditionsDisplay(Subject* pWeatherData) {
-        pWeatherData -> registerObserver(this);
+        this -> weatherData = pWeatherData;
+        weatherData -> registerObserver(this);
     }
 
     void update(float Temperature, float Humidity, float Pressure) {
