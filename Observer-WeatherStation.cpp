@@ -90,7 +90,8 @@ class StatisticsDisplay : public Observer , public DisplayElement
 {
 public:
     StatisticsDisplay(Subject* pWeatherData) {
-        pWeatherData -> registerObserver(this);
+        this -> weatherData = pWeatherData;
+        weatherData -> registerObserver(this);
     }
 
     void update(float Temperature, float Humidity, float Pressure) {
